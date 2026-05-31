@@ -18,17 +18,17 @@ tags: [教程, NapCat, QQ, 词典笔]
 
 1. 打开弹出的命令行窗口，按提示完成相应步骤
 
-![命令行窗口]({{ '/assets/images/2026-05-30-onebot-deploy/image1.png' | relative_url }})
+![命令行窗口]({{ '/assets/images/2026-05-30-onebot-deploy/image4.png' | relative_url }})
 
 此时你在浏览器上有概率看到如下界面，只需要将上面提到的网页 Token 输入进去即可。
 
-![浏览器 Token 输入界面]({{ '/assets/images/2026-05-30-onebot-deploy/image2.png' | relative_url }})
+![浏览器 Token 输入界面]({{ '/assets/images/2026-05-30-onebot-deploy/image3.png' | relative_url }})
 
 2. 网络配置
 
-![网络配置 1]({{ '/assets/images/2026-05-30-onebot-deploy/image3.png' | relative_url }})
+![网络配置 1]({{ '/assets/images/2026-05-30-onebot-deploy/image2.png' | relative_url }})
 
-![网络配置 2]({{ '/assets/images/2026-05-30-onebot-deploy/image4.png' | relative_url }})
+![网络配置 2]({{ '/assets/images/2026-05-30-onebot-deploy/image1.png' | relative_url }})
 
 至此，电脑端配置就已经完成了。
 
