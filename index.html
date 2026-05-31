@@ -11,7 +11,7 @@ layout: default
   <h2 class="section-title">最新文章</h2>
   {% for post in site.posts %}
   <article class="post-item">
-    <a class="post-item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a class="post-item-title" href="{{ post.url | relative_url }}">{% if post.password %}🔒 {% endif %}{{ post.title }}</a>
     <time class="post-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
     {% if post.excerpt %}
     <p class="post-item-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>

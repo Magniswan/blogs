@@ -492,6 +492,95 @@ a {
   .w { color: #cdd6f4; }
 }
 
+.post-locked {
+  display: none;
+}
+
+.password-form {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.password-form-inner {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.password-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.password-form-title {
+  font-family: $font-sans;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $color-muted;
+  margin-bottom: 24px;
+}
+
+.password-input-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.password-input {
+  font-family: $font-sans;
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+  color: $color-text;
+  flex: 1;
+  min-width: 0;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    border-color: $color-accent;
+  }
+}
+
+.password-btn {
+  font-family: $font-sans;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  background: $color-accent;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: $color-accent-hover;
+  }
+}
+
+.password-error {
+  display: none;
+  font-family: $font-sans;
+  font-size: 0.85rem;
+  color: #e74c3c;
+  margin-top: 12px;
+}
+
+.password-shake {
+  animation: password-shake 0.4s ease;
+}
+
+@keyframes password-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
 @media (max-width: 640px) {
   $container-padding: 20px;
 
@@ -536,5 +625,13 @@ a {
       padding: 16px;
       font-size: 0.82rem;
     }
+  }
+
+  .password-input-group {
+    flex-direction: column;
+  }
+
+  .password-btn {
+    width: 100%;
   }
 }

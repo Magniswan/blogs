@@ -13,7 +13,7 @@ title: 归档
       {% for post in year_group.items %}
       <li class="archive-item">
         <time class="archive-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d" }}</time>
-        <a class="archive-item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <a class="archive-item-title" href="{{ post.url | relative_url }}">{% if post.password %}🔒 {% endif %}{{ post.title }}</a>
       </li>
       {% endfor %}
     </ul>

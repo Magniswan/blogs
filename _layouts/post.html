@@ -15,7 +15,74 @@ layout: default
       {% endif %}
     </div>
   </header>
+
+  {% if page.password %}
+  <div class="password-form" data-password-hash="{{ page.password | sha256 }}" id="password-form">
+    <div class="password-form-inner">
+      <div class="password-icon">🔒</div>
+      <h2 class="password-form-title">这篇文章需要密码访问</h2>
+      <form class="password-input-group" id="password-form-element">
+        <input type="password" class="password-input" id="password-input" placeholder="请输入密码" autocomplete="off">
+        <button type="submit" class="password-btn">解锁</button>
+      </form>
+      <p class="password-error" id="password-error">密码错误，请重试</p>
+    </div>
+  </div>
+  <div class="post-content post-locked" id="post-content">
+    {{ content }}
+  </div>
+  {% else %}
   <div class="post-content">
     {{ content }}
   </div>
+  {% endif %}
 </article>
+
+{% if page.password %}
+<script>
+(function() {
+  var form = document.getElementById('password-form');
+  var content = document.getElementById('post-content');
+  var input = document.getElementById('password-input');
+  var error = document.getElementById('password-error');
+  var formEl = document.getElementById('password-form-element');
+  var hash = form.getAttribute('data-password-hash');
+  var storageKey = 'post-unlocked-' + window.location.pathname;
+
+  function showContent() {
+    form.style.display = 'none';
+    content.classList.remove('post-locked');
+  }
+
+  if (sessionStorage.getItem(storageKey) === hash) {
+    showContent();
+    return;
+  }
+
+  async function sha256(message) {
+    var msgBuffer = new TextEncoder().encode(message);
+    var hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    var hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+  }
+
+  formEl.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var password = input.value;
+    if (!password) return;
+    sha256(password).then(function(result) {
+      if (result === hash) {
+        sessionStorage.setItem(storageKey, hash);
+        showContent();
+      } else {
+        error.style.display = 'block';
+        input.classList.add('password-shake');
+        setTimeout(function() { input.classList.remove('password-shake'); }, 500);
+        input.value = '';
+        input.focus();
+      }
+    });
+  });
+})();
+</script>
+{% endif %}
