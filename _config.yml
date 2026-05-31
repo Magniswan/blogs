@@ -1,0 +1,21 @@
+title: 博客
+description: 记录思考与灵感
+url: "https://magniswan.github.io"
+baseurl: "/blogs"
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - .trae/
+  - Gemfile
+  - Gemfile.lock
+  - README.md

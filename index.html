@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <h1 class="hero-title">{{ site.title }}</h1>
+  <p class="hero-subtitle">{{ site.description }}</p>
+</section>
+
+<section class="post-list">
+  <h2 class="section-title">最新文章</h2>
+  {% for post in site.posts %}
+  <article class="post-item">
+    <a class="post-item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <time class="post-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+    {% if post.excerpt %}
+    <p class="post-item-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+  {% if site.posts.size == 0 %}
+  <p class="empty-hint">暂无文章，即将更新。</p>
+  {% endif %}
+</section>

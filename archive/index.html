@@ -1,0 +1,25 @@
+---
+layout: default
+title: 归档
+---
+
+<section class="archive">
+  <h1 class="archive-title">归档</h1>
+  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year_group in posts_by_year %}
+  <div class="archive-year">
+    <h2 class="archive-year-title">{{ year_group.name }}</h2>
+    <ul class="archive-list">
+      {% for post in year_group.items %}
+      <li class="archive-item">
+        <time class="archive-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d" }}</time>
+        <a class="archive-item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  {% if site.posts.size == 0 %}
+  <p class="empty-hint">暂无文章。</p>
+  {% endif %}
+</section>
