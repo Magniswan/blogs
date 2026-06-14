@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'dark' || stored === 'light') {
+          document.documentElement.setAttribute('data-theme', stored);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
@@ -15,5 +25,19 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      if (!toggle) return;
+      var root = document.documentElement;
+      toggle.addEventListener('click', function() {
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var current = root.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+  </script>
 </body>
 </html>

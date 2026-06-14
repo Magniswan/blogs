@@ -3,10 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'dark' || stored === 'light') {
+          document.documentElement.setAttribute('data-theme', stored);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <title>归档 - 博客</title>
   <meta name="description" content="记录思考与灵感">
   <link rel="stylesheet" href="/blogs/assets/css/main.css">
-  <link type="application/atom+xml" rel="alternate" href="https://magniswan.github.io/blogs/feed.xml" title="博客" />
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blogs/feed.xml" title="博客" />
   <!-- Begin Jekyll SEO tag v2.9.0 -->
 <title>归档 | 博客</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -14,14 +24,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="记录思考与灵感" />
 <meta name="twitter:description" property="og:description" content="记录思考与灵感" />
-<link rel="canonical" href="https://magniswan.github.io/blogs/archive/" />
-<meta property="og:url" content="https://magniswan.github.io/blogs/archive/" />
+<link rel="canonical" href="http://localhost:4000/blogs/archive/" />
+<meta property="og:url" content="http://localhost:4000/blogs/archive/" />
 <meta property="og:site_name" content="博客" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="归档" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"记录思考与灵感","headline":"归档","url":"https://magniswan.github.io/blogs/archive/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"记录思考与灵感","headline":"归档","url":"http://localhost:4000/blogs/archive/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -29,9 +39,27 @@
   <header class="site-header">
   <nav class="container nav-inner">
     <a class="site-title" href="/blogs/">博客</a>
-    <div class="nav-links">
-      <a href="/blogs/">首页</a>
-      <a href="/blogs/archive/">归档</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/blogs/">首页</a>
+        <a href="/blogs/archive/">归档</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
     </div>
   </nav>
 </header>
@@ -63,5 +91,19 @@
   </div>
 </footer>
 
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      if (!toggle) return;
+      var root = document.documentElement;
+      toggle.addEventListener('click', function() {
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var current = root.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+  </script>
 </body>
 </html>

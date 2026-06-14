@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://magniswan.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://magniswan.github.io/blogs/" rel="alternate" type="text/html" /><updated>2026-05-31T11:40:28+08:00</updated><id>https://magniswan.github.io/blogs/feed.xml</id><title type="html">博客</title><subtitle>记录思考与灵感</subtitle><entry><title type="html">笔上QQ（局域网内）使用教程</title><link href="https://magniswan.github.io/blogs/2026/05/30/onebot-deploy/" rel="alternate" type="text/html" title="笔上QQ（局域网内）使用教程" /><published>2026-05-30T00:00:00+08:00</published><updated>2026-05-30T00:00:00+08:00</updated><id>https://magniswan.github.io/blogs/2026/05/30/onebot-deploy</id><content type="html" xml:base="https://magniswan.github.io/blogs/2026/05/30/onebot-deploy/"><![CDATA[<h1 id="笔上qq局域网内使用教程">笔上QQ（局域网内）使用教程</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blogs/" rel="alternate" type="text/html" /><updated>2026-06-14T18:33:42+08:00</updated><id>http://localhost:4000/blogs/feed.xml</id><title type="html">博客</title><subtitle>记录思考与灵感</subtitle><entry><title type="html">笔上QQ（局域网内）使用教程</title><link href="http://localhost:4000/blogs/2026/05/30/onebot-deploy/" rel="alternate" type="text/html" title="笔上QQ（局域网内）使用教程" /><published>2026-05-30T00:00:00+08:00</published><updated>2026-05-30T00:00:00+08:00</updated><id>http://localhost:4000/blogs/2026/05/30/onebot-deploy</id><content type="html" xml:base="http://localhost:4000/blogs/2026/05/30/onebot-deploy/"><![CDATA[<h1 id="笔上qq局域网内使用教程">笔上QQ（局域网内）使用教程</h1>
 
 <h4 id="一安装napcatqq">一、安装NapCatQQ</h4>
 
@@ -15,19 +15,19 @@
   <li>打开弹出的命令行窗口，按提示完成相应步骤</li>
 </ol>
 
-<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image1.png" alt="命令行窗口" /></p>
+<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image4.png" alt="命令行窗口" /></p>
 
 <p>此时你在浏览器上有概率看到如下界面，只需要将上面提到的网页 Token 输入进去即可。</p>
 
-<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image2.png" alt="浏览器 Token 输入界面" /></p>
+<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image3.png" alt="浏览器 Token 输入界面" /></p>
 
 <ol>
   <li>网络配置</li>
 </ol>
 
-<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image3.png" alt="网络配置 1" /></p>
+<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image2.png" alt="网络配置 1" /></p>
 
-<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image4.png" alt="网络配置 2" /></p>
+<p><img src="/blogs/assets/images/2026-05-30-onebot-deploy/image1.png" alt="网络配置 2" /></p>
 
 <p>至此，电脑端配置就已经完成了。</p>
 
