@@ -8,8 +8,8 @@ tags: [教程, iFlyCompass, WinUI3, 桌面应用]
 # iFlyCompassGUI：让iFlyCompass管理更轻松
 
 ## 前言
-`iFlyCompass`是一款非常强大的局域网服务器，结合了很多很多功能，但它需要在本地配置 Python 环境才能运行.基于源码安装调试的运作模式无疑给用户的使用带来了一些麻烦。于是，为了方便用户的使用，我决定开发一个桌面应用，这便是开发这个应用的初衷。
->iFlyCompass [项目地址](https://github.com/MoyuZJ912/iFlyCompass) & [文档地址](https://www.linearteam.top/make-%e8%bd%af%e7%a0%b4-great-again/)
+`iFlyCompass`是一款非常强大的局域网服务器，结合了很多很多功能，但它需要在本地配置 Python 环境才能运行。基于源码安装调试的运作模式无疑给用户的使用带来了一些麻烦。于是，为了方便用户的使用，我决定开发一个桌面应用，这便是开发这个应用的初衷。
+>iFlyCompass [项目地址](https://github.com/MoyuZJ912/iFlyCompass) & [发布地址](https://www.linearteam.top/make-%e8%bd%af%e7%a0%b4-great-again/)
 
 ## 什么是 iFlyCompassGUI
 
@@ -22,7 +22,7 @@ tags: [教程, iFlyCompass, WinUI3, 桌面应用]
 - 管理 `iFlyCompass` 的各个功能模块（用户管理、小说阅读器、视频播放器、AI对话等）
 - 支持开机静默自启（没有系统托盘）
 - ...
->更多功能可能在后续版本中添加，届时可能不会在文章中详细介绍。
+>更多功能可能在后续版本中添加，可能不会在文章中即使更新。
 
 ## 安装教程
 
@@ -57,7 +57,7 @@ tags: [教程, iFlyCompass, WinUI3, 桌面应用]
 
 `iFlyCompassGUI` 将繁琐的配置流程简化为直观的图形化操作，让更多用户能够轻松上手 `iFlyCompass`。无论是安装配置、服务管理还是内容维护，都变得前所未有的简单。
 
-项目已开源，遵循 MIT 许可证，欢迎各位用户前往 [GitHub](https://github.com/Magniswan/iFlyCompassGUI) 使用，也欢迎大家在 [GitHub Issues](https://github.com/Magniswan/iFlyCompassGUI/issues) 上提出建议，帮助改进项目（顺手也可以给个 Star）。
+项目已开源，遵循 MIT 许可证，欢迎各位用户前往 [GitHub](https://github.com/Magniswan/iFlyCompassGUI) 查看项目代码，也欢迎大家在 [GitHub Issues](https://github.com/Magniswan/iFlyCompassGUI/issues) 上提出建议，帮助改进项目（顺手也可以给个 Star）。
 
 *****
 ![软件截图]({{ '/assets/images/2026-06-16-iFlyCompassGUI/image.png' | relative_url }})
