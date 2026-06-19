@@ -60,4 +60,4 @@ tags: [教程, iFlyCompass, WinUI3, 桌面应用]
 项目已开源，遵循 MIT 许可证，欢迎各位用户前往 [GitHub](https://github.com/Magniswan/iFlyCompassGUI) 使用，也欢迎大家在 [GitHub Issues](https://github.com/Magniswan/iFlyCompassGUI/issues) 上提出建议，帮助改进项目（顺手也可以给个 Star）。
 
 *****
-![软件截图](/assets/images/2026-06-16-iFlyCompassGUI/image.png)
+![软件截图]({{ '/assets/images/2026-06-16-iFlyCompassGUI/image.png' | relative_url }})
