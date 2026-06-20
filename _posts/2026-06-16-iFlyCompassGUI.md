@@ -13,7 +13,7 @@ tags: [教程, iFlyCompass, WinUI3, 桌面应用]
 
 > iFlyCompass 
 >
-> 本程序依赖 **iFlyCompass** [（发布地址）](https://www.linearteam.top/make-%e8%bd%af%e7%a0%b4-great-again/)，版权归[**摸鱼真君不摸鱼**](https://moyuzj.cn/)所有。
+> 本程序依赖 **`iFlyCompass`** [（发布地址）](https://www.linearteam.top/make-%e8%bd%af%e7%a0%b4-great-again/)，版权归[**摸鱼真君不摸鱼**](https://moyuzj.cn/)所有。
 >
 > 该核心程序从 [iFlyCompass GitHub 仓库](https://github.com/MoyuZJ912/iFlyCompass) 自动下载，本启动器不对核心代码进行任何修改。
 >
@@ -28,7 +28,7 @@ tags: [教程, iFlyCompass, WinUI3, 桌面应用]
 
 ## 功能
 
-- 一键式下载、安装、更新、启动和关闭 iFlyCompass 服务
+- 一键式下载、安装、更新、启动和关闭 `iFlyCompass` 服务
 - 管理 `iFlyCompass` 的各个功能模块（用户管理、小说阅读器、视频播放器、AI对话等）
 - 支持开机静默自启（没有系统托盘）
 - ...
@@ -57,7 +57,7 @@ tags: [教程, iFlyCompass, WinUI3, 桌面应用]
 
 ## 使用教程
 
-1. 首次安装并打开应用后你需要调用屏幕键盘，输入“iflycompass”（不区分大小写），然后就会进入安装界面。
+1. 首次安装并打开应用后你需要调用屏幕键盘，输入`iflycompass`（不区分大小写），然后就会进入安装界面。
 > 至于为什么，自己品。
 >
 > 输入内容后续你可以在设置里面更改。
